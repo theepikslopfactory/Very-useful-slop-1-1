@@ -1,0 +1,21 @@
+/* Protect core YouTube layout */
+ytd-app,
+#content,
+#page-manager,
+ytd-page-manager,
+ytd-watch-flexy {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Safe ad hiding — ONLY hide real ads */
+iframe[src*="ads"],
+iframe[src*="doubleclick"],
+ytd-promoted-sparkles-web-renderer,
+ytd-display-ad-renderer,
+ytd-promoted-video-renderer {
+    display: none !important;
+}
+
+/* DO NOT hide anything with "ad" in the class/id — too dangerous */

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adblock Settings</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #0f0f0f;
+        color: #e5e5e5;
+        margin: 0;
+        padding: 15px;
+        width: 260px;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+        color: #ffffff;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 10px;
+        transform: scale(1.2);
+        accent-color: #4a90e2;
+      }
+
+      button {
+        width: 100%;
+        margin-top: 12px;
+        padding: 10px;
+        background-color: #1f6feb;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.15s;
+      }
+
+      button:hover {
+        background-color: #1158c7;
+      }
+
+      #resetBlocks {
+        background-color: #d73a49;
+      }
+
+      #resetBlocks:hover {
+        background-color: #b92533;
+      }
+
+      .section {
+        padding: 10px;
+        background: #1a1a1a;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        border: 1px solid #2a2a2a;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Adblock Settings</h2>
+
+    <div class="section">
+      <label><input type="checkbox" id="youtubeAds" checked> Hide YouTube ads</label>
+      <label><input type="checkbox" id="iframeAds" checked> Hide iframe ads</label>
+    </div>
+
+    <button id="save">Save Settings</button>
+    <button id="blockElement">Block Element</button>
+    <button id="resetBlocks">Reset Blocks</button>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
